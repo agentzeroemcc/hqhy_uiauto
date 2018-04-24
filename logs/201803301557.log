@@ -1,0 +1,50 @@
+2018-03-30 15:57:44,471 - BrowserEngine - INFO - You had select Chrome browser.
+2018-03-30 15:57:44,471 - BrowserEngine - INFO - The test server url is: http://test-04.guttv.lab:9993/cas/login?service=http://test-06.guttv.lab:8814/vod_console/authentication
+2018-03-30 15:57:48,678 - BrowserEngine - INFO - Starting Chrome browser.
+2018-03-30 15:57:51,995 - BrowserEngine - INFO - Open url: http://test-04.guttv.lab:9993/cas/login?service=http://test-06.guttv.lab:8814/vod_console/authentication
+2018-03-30 15:57:53,119 - BrowserEngine - INFO - Maximize the current window.
+2018-03-30 15:57:53,125 - BrowserEngine - INFO - Set implicitly wait 10 seconds.
+2018-03-30 15:57:53,175 - BasePage - INFO - Had find the element '  ' successful by id via value: username 
+2018-03-30 15:57:53,270 - BasePage - INFO - Had type ' admin ' in inputBox
+2018-03-30 15:57:54,271 - BasePage - INFO - Sleep for 1 seconds
+2018-03-30 15:57:54,343 - BasePage - INFO - Had find the element '  ' successful by id via value: password 
+2018-03-30 15:57:54,399 - BasePage - INFO - Had type ' 1234 ' in inputBox
+2018-03-30 15:57:55,399 - BasePage - INFO - Sleep for 1 seconds
+2018-03-30 15:57:55,451 - BasePage - INFO - Had find the element ' 登录 ' successful by xpath via value: //*[@id='fm1']/div[7]/div/button 
+2018-03-30 15:57:55,969 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="81fa6a55db670ef462e8993200fd5b22", element="0.43074605851239234-3")> ' was clicked.
+2018-03-30 15:57:57,970 - BasePage - INFO - Sleep for 2 seconds
+2018-03-30 15:58:02,271 - BasePage - INFO - Had find the element ' 导航管理 ' successful by xpath via value: /html/body/div[1]/div/div[2]/ul[1]/li[2]/a 
+2018-03-30 15:58:02,955 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="81fa6a55db670ef462e8993200fd5b22", element="0.8694333687522546-1")> ' was clicked.
+2018-03-30 15:58:04,956 - BasePage - INFO - Sleep for 2 seconds
+2018-03-30 15:58:05,009 - BasePage - INFO - Had find the element ' 推荐位布局 ' successful by xpath via value: //*[@id="collapseOne"]/div/ul/li[3]/a 
+2018-03-30 15:58:06,966 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="81fa6a55db670ef462e8993200fd5b22", element="0.6389465204746185-1")> ' was clicked.
+2018-03-30 15:58:09,967 - BasePage - INFO - Sleep for 3 seconds
+2018-03-30 15:58:10,051 - BasePage - INFO - Had find the element ' 新增 ' successful by xpath via value: //*[@id="add"] 
+2018-03-30 15:58:10,142 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="81fa6a55db670ef462e8993200fd5b22", element="0.3300738655324731-1")> ' was clicked.
+2018-03-30 15:58:12,143 - BasePage - INFO - Sleep for 2 seconds
+2018-03-30 15:58:12,231 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="name"] 
+2018-03-30 15:58:12,344 - BasePage - INFO - Had type ' a自动化推荐 ' in inputBox
+2018-03-30 15:58:14,345 - BasePage - INFO - Sleep for 2 seconds
+2018-03-30 15:58:14,468 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="table"]/tbody/tr[1]/td[1]/input 
+2018-03-30 15:58:14,560 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="table"]/tbody/tr[1]/td[2]/a[1]/i 
+2018-03-30 15:58:14,653 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="table"]/tbody/tr[1]/td[2]/a[2]/i 
+2018-03-30 15:58:24,758 - BasePage - ERROR - NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="btnAppendColumn"]"}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+2018-03-30 15:58:24,804 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="table"]/tbody/tr[1]/td[2]/a[1]/i 
+2018-03-30 15:58:34,905 - BasePage - ERROR - NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="browse"]"}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+2018-03-30 15:58:34,972 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="table"]/tbody/tr[1]/td[2]/a[2]/i 
+2018-03-30 15:58:35,056 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="table"]/tbody/tr[1]/td[2]/a[3]/i 
+2018-03-30 15:58:45,165 - BasePage - ERROR - NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="btnAppendColumn"]"}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+2018-03-30 15:58:55,197 - BasePage - ERROR - NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[3]/div/div[2]/h2/small/a"}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+2018-03-30 15:58:55,255 - BasePage - INFO - Had find the element ' 新增 ' successful by xpath via value: //*[@id="add"] 

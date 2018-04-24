@@ -1,0 +1,21 @@
+2018-03-23 09:50:32,374 - BrowserEngine - INFO - You had select Chrome browser.
+2018-03-23 09:50:32,374 - BrowserEngine - INFO - The test server url is: http://test-04.guttv.lab:9993/cas/login?service=http://test-06.guttv.lab:8814/vod_console/authentication
+2018-03-23 09:50:36,593 - BrowserEngine - INFO - Starting Chrome browser.
+2018-03-23 09:50:40,527 - BrowserEngine - INFO - Open url: http://test-04.guttv.lab:9993/cas/login?service=http://test-06.guttv.lab:8814/vod_console/authentication
+2018-03-23 09:50:41,667 - BrowserEngine - INFO - Maximize the current window.
+2018-03-23 09:50:41,670 - BrowserEngine - INFO - Set implicitly wait 10 seconds.
+2018-03-23 09:50:41,734 - BasePage - INFO - Had find the element '  ' successful by id via value: username 
+2018-03-23 09:50:41,832 - BasePage - INFO - Had type ' admin ' in inputBox
+2018-03-23 09:50:42,832 - BasePage - INFO - Sleep for 1 seconds
+2018-03-23 09:50:42,879 - BasePage - INFO - Had find the element '  ' successful by id via value: password 
+2018-03-23 09:50:42,946 - BasePage - INFO - Had type ' 1234 ' in inputBox
+2018-03-23 09:50:43,947 - BasePage - INFO - Sleep for 1 seconds
+2018-03-23 09:50:44,011 - BasePage - INFO - Had find the element ' 登录 ' successful by xpath via value: //*[@id='fm1']/div[7]/div/button 
+2018-03-23 09:50:45,397 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="f86d37648e0579a1d6b3bca38cbc21c2", element="0.0163664010213338-3")> ' was clicked.
+2018-03-23 09:50:47,398 - BasePage - INFO - Sleep for 2 seconds
+2018-03-23 09:50:51,610 - BasePage - INFO - Had find the element ' 渠道管理 ' successful by xpath via value: /html/body/div[1]/div/div[2]/ul[1]/li[2]/a 
+2018-03-23 09:50:52,504 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="f86d37648e0579a1d6b3bca38cbc21c2", element="0.5273778675796577-1")> ' was clicked.
+2018-03-23 09:50:54,505 - BasePage - INFO - Sleep for 2 seconds
+2018-03-23 09:50:55,550 - BasePage - INFO - Had find the element ' 渠道定价 ' successful by xpath via value: //*[@id="collapseOne"]/div/ul/li[2]/a 
+2018-03-23 09:50:55,970 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="f86d37648e0579a1d6b3bca38cbc21c2", element="0.5324305091771042-1")> ' was clicked.
+2018-03-23 09:50:58,972 - BasePage - INFO - Sleep for 3 seconds

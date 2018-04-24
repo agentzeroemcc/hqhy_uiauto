@@ -1,0 +1,22 @@
+2018-03-23 11:13:22,250 - BrowserEngine - INFO - You had select Chrome browser.
+2018-03-23 11:13:22,250 - BrowserEngine - INFO - The test server url is: http://test-04.guttv.lab:9993/cas/login?service=http://test-06.guttv.lab:8814/vod_console/authentication
+2018-03-23 11:13:27,691 - BrowserEngine - INFO - Starting Chrome browser.
+2018-03-23 11:13:31,338 - BrowserEngine - INFO - Open url: http://test-04.guttv.lab:9993/cas/login?service=http://test-06.guttv.lab:8814/vod_console/authentication
+2018-03-23 11:13:32,491 - BrowserEngine - INFO - Maximize the current window.
+2018-03-23 11:13:32,493 - BrowserEngine - INFO - Set implicitly wait 10 seconds.
+2018-03-23 11:13:32,550 - BasePage - INFO - Had find the element '  ' successful by id via value: username 
+2018-03-23 11:13:32,632 - BasePage - INFO - Had type ' admin ' in inputBox
+2018-03-23 11:13:33,633 - BasePage - INFO - Sleep for 1 seconds
+2018-03-23 11:13:33,687 - BasePage - INFO - Had find the element '  ' successful by id via value: password 
+2018-03-23 11:13:33,755 - BasePage - INFO - Had type ' 1234 ' in inputBox
+2018-03-23 11:13:34,756 - BasePage - INFO - Sleep for 1 seconds
+2018-03-23 11:13:34,810 - BasePage - INFO - Had find the element ' µÇÂ¼ ' successful by xpath via value: //*[@id='fm1']/div[7]/div/button 
+2018-03-23 11:13:35,374 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="601cec94576841d6ff456b15a1e2794f", element="0.816083334267256-3")> ' was clicked.
+2018-03-23 11:13:37,375 - BasePage - INFO - Sleep for 2 seconds
+2018-03-23 11:13:42,376 - BrowserEngine - INFO - You had select Chrome browser.
+2018-03-23 11:13:42,376 - BrowserEngine - INFO - The test server url is: http://10.3.1.107:8801/bms_api/price!getPackagePricing?serviceComboCode=1100121022149038548320021&serviceGroupCode=1100122106018227744980001&packageCode=2100130106015832271170002&authType=0&authCode=1301301087006196857558000101&token=0
+2018-03-23 11:13:42,431 - BrowserEngine - INFO - agentzeroÇþµÀ¶¨¼Û
+2018-03-23 11:13:54,474 - BasePage - ERROR - NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="bindProduct"]"}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+

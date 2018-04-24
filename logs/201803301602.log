@@ -1,0 +1,15 @@
+2018-03-30 16:02:42,646 - BrowserEngine - INFO - You had select Chrome browser.
+2018-03-30 16:02:42,647 - BrowserEngine - INFO - The test server url is: http://test-04.guttv.lab:9993/cas/login?service=http://test-06.guttv.lab:8814/vod_console/authentication
+2018-03-30 16:02:47,097 - BrowserEngine - INFO - Starting Chrome browser.
+2018-03-30 16:02:50,690 - BrowserEngine - INFO - Open url: http://test-04.guttv.lab:9993/cas/login?service=http://test-06.guttv.lab:8814/vod_console/authentication
+2018-03-30 16:02:51,846 - BrowserEngine - INFO - Maximize the current window.
+2018-03-30 16:02:51,848 - BrowserEngine - INFO - Set implicitly wait 10 seconds.
+2018-03-30 16:02:51,902 - BasePage - INFO - Had find the element '  ' successful by id via value: username 
+2018-03-30 16:02:51,991 - BasePage - INFO - Had type ' admin ' in inputBox
+2018-03-30 16:02:52,992 - BasePage - INFO - Sleep for 1 seconds
+2018-03-30 16:02:53,061 - BasePage - INFO - Had find the element '  ' successful by id via value: password 
+2018-03-30 16:02:53,122 - BasePage - INFO - Had type ' 1234 ' in inputBox
+2018-03-30 16:02:54,122 - BasePage - INFO - Sleep for 1 seconds
+2018-03-30 16:02:54,161 - BasePage - INFO - Had find the element ' µÇÂ¼ ' successful by xpath via value: //*[@id='fm1']/div[7]/div/button 
+2018-03-30 16:02:54,683 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="168449244d065b4676e176cfff238693", element="0.7004280526064379-3")> ' was clicked.
+2018-03-30 16:02:56,683 - BasePage - INFO - Sleep for 2 seconds

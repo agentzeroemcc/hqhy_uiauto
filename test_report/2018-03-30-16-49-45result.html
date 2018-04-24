@@ -1,0 +1,1583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2018-03-30 16:49:45</p>
+<p class='attribute'><strong>Duration:</strong> 0:04:57.285224</p>
+<p class='attribute'><strong>Status:</strong> Pass 12 Error 18</p>
+
+<p class='description'>用例执行情况：</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Oms_Business_combination.Busines_combination.Business_com</td>
+    <td>12</td>
+    <td>7</td>
+    <td>0</td>
+    <td>5</td>
+    <td><a href="javascript:showClassDetail('c1',12)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Newly_added: 新增</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_search: 搜索</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Enable: 启用</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_disable: 停用</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_edit: 编辑</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Bound_service: 绑定业务分组</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_Bound_Navigation: 绑定导航</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.7')" >
+        error</a>
+
+    <div id='div_ft1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.7: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Busines_combination.py", line 158, in test_Bound_Navigation
+    self.assertEqual('  福建联通', nav_name)
+  File "C:\Python33\lib\unittest\case.py", line 641, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Python33\lib\unittest\case.py", line 1020, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Python33\lib\unittest\case.py", line 508, in fail
+    raise self.failureException(msg)
+AssertionError: '  福建联通' != '  铁通总部'
+-   福建联通
++   铁通总部
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Busines_combination.py", line 160, in test_Bound_Navigation
+    print("Test fail.", format(e), homepage.get_windows_img())
+  File "E:\automation_framework\framework\base_page.py", line 57, in get_windows_img
+    self.driver.get_screenshot_as_base64(screen_name)  #  断言错误会展现在报告中
+TypeError: get_screenshot_as_base64() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Busines_combination.py", line 158, in test_Bound_Navigation
+    self.assertEqual('  福建联通', nav_name)
+  File "C:\Python33\lib\unittest\case.py", line 641, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Python33\lib\unittest\case.py", line 1020, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Python33\lib\unittest\case.py", line 508, in fail
+    raise self.failureException(msg)
+AssertionError: '  福建联通' != '  铁通总部'
+-   福建联通
++   铁通总部
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Busines_combination.py", line 160, in test_Bound_Navigation
+    print("Test fail.", format(e), homepage.get_windows_img())
+  File "E:\automation_framework\framework\base_page.py", line 57, in get_windows_img
+    self.driver.get_screenshot_as_base64(screen_name)  #  断言错误会展现在报告中
+TypeError: get_screenshot_as_base64() takes 1 positional argument but 2 were given
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_Navigation_details: 导航详情</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.8')" >
+        error</a>
+
+    <div id='div_ft1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.8: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Busines_combination.py", line 169, in test_Navigation_details
+    Select(driver.find_element_by_id('navList')).select_by_value('1100070023874046224810008')  # 选择导航项  推荐
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\support\select.py", line 87, in select_by_value
+    raise NoSuchElementException("Cannot locate option with value: %s" % value)
+selenium.common.exceptions.NoSuchElementException: Message: Cannot locate option with value: 1100070023874046224810008
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Busines_combination.py", line 169, in test_Navigation_details
+    Select(driver.find_element_by_id('navList')).select_by_value('1100070023874046224810008')  # 选择导航项  推荐
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\support\select.py", line 87, in select_by_value
+    raise NoSuchElementException("Cannot locate option with value: %s" % value)
+selenium.common.exceptions.NoSuchElementException: Message: Cannot locate option with value: 1100070023874046224810008
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.9' class='none'>
+    <td class='errorCase'><div class='testcase'>test_delete: 删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.9')" >
+        error</a>
+
+    <div id='div_ft1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.9: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Busines_combination.py", line 265, in test_delete
+    homepage.bound_ser()  # 点击绑定业务分组
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 1337, in bound_ser
+    self.click(self.bound)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;i class="glyphicon glyphicon-th"&gt;&lt;/i&gt; is not clickable at point (479, 232). Other element would receive the click: &lt;div class="form-inline" style="padding-bottom: 10px;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Busines_combination.py", line 265, in test_delete
+    homepage.bound_ser()  # 点击绑定业务分组
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 1337, in bound_ser
+    self.click(self.bound)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;i class="glyphicon glyphicon-th"&gt;&lt;/i&gt; is not clickable at point (479, 232). Other element would receive the click: &lt;div class="form-inline" style="padding-bottom: 10px;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_fjlt_interface: 福建联通绑定业务分组接口测试</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft1.11' class='none'>
+    <td class='errorCase'><div class='testcase'>test_paging: 隐藏/显示分页</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.11')" >
+        error</a>
+
+    <div id='div_ft1.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.11: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Busines_combination.py", line 333, in test_paging
+    homepage.busines_com()  # 点击业务组合
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 1317, in busines_com
+    self.click(self.busines)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;a href="/oms_console/combo/list"&gt;...&lt;/a&gt; is not clickable at point (502, 25). Other element would receive the click: &lt;div class="modal-dialog modal-lg" style="width: 80%;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Busines_combination.py", line 333, in test_paging
+    homepage.busines_com()  # 点击业务组合
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 1317, in busines_com
+    self.click(self.busines)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;a href="/oms_console/combo/list"&gt;...&lt;/a&gt; is not clickable at point (502, 25). Other element would receive the click: &lt;div class="modal-dialog modal-lg" style="width: 80%;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.12' class='none'>
+    <td class='errorCase'><div class='testcase'>test_column_operation: 列操作</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.12')" >
+        error</a>
+
+    <div id='div_ft1.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.12: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Busines_combination.py", line 353, in test_column_operation
+    driver.find_element_by_xpath('/html/body/div[3]/div/div[2]/div[2]/div[1]/div[2]/div/button').click()  #  点击列
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;...&lt;/button&gt; is not clickable at point (1868, 144). Other element would receive the click: &lt;div id="combo_nav_list" class="modal fadein in" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="false" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Busines_combination.py", line 353, in test_column_operation
+    driver.find_element_by_xpath('/html/body/div[3]/div/div[2]/div[2]/div[1]/div[2]/div/button').click()  #  点击列
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;...&lt;/button&gt; is not clickable at point (1868, 144). Other element would receive the click: &lt;div id="combo_nav_list" class="modal fadein in" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="false" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Oms_Business_combination.Terminal_binding.Terninal</td>
+    <td>6</td>
+    <td>2</td>
+    <td>0</td>
+    <td>4</td>
+    <td><a href="javascript:showClassDetail('c2',6)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Newly_added: 新增</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Enable_disable: 启用/停用</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
+        pass</a>
+
+    <div id='div_pt2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.2: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_Edit: 编辑</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.3')" >
+        error</a>
+
+    <div id='div_ft2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.3: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_binding.py", line 113, in test_Edit
+    driver.find_element_by_css_selector('html body div.container-fluid div.row div.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main div#edit_devicerule_dialog.modal.fade.in div.modal-dialog.modal-lg div.modal-content div.modal-body form#edit_devicerule_form.form-horizontal div.form-group div.col-sm-7 input#edit_name.form-control').send_keys('（编辑）')   #  名称添加
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 509, in find_element_by_css_selector
+    return self.find_element(by=By.CSS_SELECTOR, value=css_selector)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : 确认启用此终端规则：终端绑定测试？}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_binding.py", line 113, in test_Edit
+    driver.find_element_by_css_selector('html body div.container-fluid div.row div.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main div#edit_devicerule_dialog.modal.fade.in div.modal-dialog.modal-lg div.modal-content div.modal-body form#edit_devicerule_form.form-horizontal div.form-group div.col-sm-7 input#edit_name.form-control').send_keys('（编辑）')   #  名称添加
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 509, in find_element_by_css_selector
+    return self.find_element(by=By.CSS_SELECTOR, value=css_selector)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : 确认启用此终端规则：终端绑定测试？}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_Handoff_service: 切换业务组合</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.4')" >
+        error</a>
+
+    <div id='div_ft2.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.4: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_binding.py", line 134, in test_Handoff_service
+    edit_name = driver.find_element_by_xpath('//*[@id="table"]/tbody/tr/td[5]').text  # 获取名称
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : 确认启用此终端规则：终端绑定测试？}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_binding.py", line 134, in test_Handoff_service
+    edit_name = driver.find_element_by_xpath('//*[@id="table"]/tbody/tr/td[5]').text  # 获取名称
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : 确认启用此终端规则：终端绑定测试？}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_Unbound: 解除绑定</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.5')" >
+        error</a>
+
+    <div id='div_ft2.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.5: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_binding.py", line 162, in test_Unbound
+    homepage.unbound_edit()  #  点击解除绑定
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 1485, in unbound_edit
+    self.click(self.unbound)
+  File "E:\automation_framework\framework\base_page.py", line 136, in click
+    el = self.find_element(selector)
+  File "E:\automation_framework\framework\base_page.py", line 97, in find_element
+    element = self.driver.find_element_by_xpath(selector_value)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : 确认启用此终端规则：终端绑定测试？}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_binding.py", line 162, in test_Unbound
+    homepage.unbound_edit()  #  点击解除绑定
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 1485, in unbound_edit
+    self.click(self.unbound)
+  File "E:\automation_framework\framework\base_page.py", line 136, in click
+    el = self.find_element(selector)
+  File "E:\automation_framework\framework\base_page.py", line 97, in find_element
+    element = self.driver.find_element_by_xpath(selector_value)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : 确认启用此终端规则：终端绑定测试？}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_reset: 重置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.6')" >
+        error</a>
+
+    <div id='div_ft2.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.6: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_binding.py", line 183, in test_reset
+    homepage.searchReset()  #  点击重置
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 579, in searchReset
+    self.click(self.search_R)
+  File "E:\automation_framework\framework\base_page.py", line 136, in click
+    el = self.find_element(selector)
+  File "E:\automation_framework\framework\base_page.py", line 97, in find_element
+    element = self.driver.find_element_by_xpath(selector_value)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : 确认启用此终端规则：终端绑定测试？}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_binding.py", line 183, in test_reset
+    homepage.searchReset()  #  点击重置
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 579, in searchReset
+    self.click(self.search_R)
+  File "E:\automation_framework\framework\base_page.py", line 136, in click
+    el = self.find_element(selector)
+  File "E:\automation_framework\framework\base_page.py", line 97, in find_element
+    element = self.driver.find_element_by_xpath(selector_value)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : 确认启用此终端规则：终端绑定测试？}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Oms_Business_combination.Terminal_list.TerninalList</td>
+    <td>5</td>
+    <td>1</td>
+    <td>0</td>
+    <td>4</td>
+    <td><a href="javascript:showClassDetail('c3',5)">Detail</a></td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_search: 搜索</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
+        pass</a>
+
+    <div id='div_pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.1: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_enable_disable: 启用/停用</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.2')" >
+        error</a>
+
+    <div id='div_ft3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.2: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_list.py", line 48, in test_enable_disable
+    assert VodSearch.get_ass_text(self) == '终端停用成功!'
+AssertionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_list.py", line 52, in test_enable_disable
+    homepage.get_windows_img()
+  File "E:\automation_framework\framework\base_page.py", line 57, in get_windows_img
+    self.driver.get_screenshot_as_base64(screen_name)  #  断言错误会展现在报告中
+TypeError: get_screenshot_as_base64() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_list.py", line 48, in test_enable_disable
+    assert VodSearch.get_ass_text(self) == '终端停用成功!'
+AssertionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_list.py", line 52, in test_enable_disable
+    homepage.get_windows_img()
+  File "E:\automation_framework\framework\base_page.py", line 57, in get_windows_img
+    self.driver.get_screenshot_as_base64(screen_name)  #  断言错误会展现在报告中
+TypeError: get_screenshot_as_base64() takes 1 positional argument but 2 were given
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_Handoff_service: 切换业务组合</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.3')" >
+        error</a>
+
+    <div id='div_ft3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.3: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_list.py", line 84, in test_Handoff_service
+    homepage.unbound_edit()  #  点击切换业务组合
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 1485, in unbound_edit
+    self.click(self.unbound)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;i class="glyphicon glyphicon-transfer"&gt;&lt;/i&gt; is not clickable at point (514, 299). Other element would receive the click: &lt;div class="bootbox modal fade in" tabindex="-1" role="dialog" aria-hidden="false" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_list.py", line 84, in test_Handoff_service
+    homepage.unbound_edit()  #  点击切换业务组合
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 1485, in unbound_edit
+    self.click(self.unbound)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;i class="glyphicon glyphicon-transfer"&gt;&lt;/i&gt; is not clickable at point (514, 299). Other element would receive the click: &lt;div class="bootbox modal fade in" tabindex="-1" role="dialog" aria-hidden="false" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_Unbound: 解除绑定</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.4')" >
+        error</a>
+
+    <div id='div_ft3.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.4: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_list.py", line 108, in test_Unbound
+    homepage.unbound_edit1()  #  点击解除绑定
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 1497, in unbound_edit1
+    self.click(self.unbound1)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;i class="glyphicon glyphicon-remove"&gt;&lt;/i&gt; is not clickable at point (496, 299). Other element would receive the click: &lt;div class="bootbox modal fade in" tabindex="-1" role="dialog" aria-hidden="false" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_list.py", line 108, in test_Unbound
+    homepage.unbound_edit1()  #  点击解除绑定
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 1497, in unbound_edit1
+    self.click(self.unbound1)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;i class="glyphicon glyphicon-remove"&gt;&lt;/i&gt; is not clickable at point (496, 299). Other element would receive the click: &lt;div class="bootbox modal fade in" tabindex="-1" role="dialog" aria-hidden="false" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_Reset: 重置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.5')" >
+        error</a>
+
+    <div id='div_ft3.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.5: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_list.py", line 129, in test_Reset
+    homepage.searchReset()  #  重置
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 579, in searchReset
+    self.click(self.search_R)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;button type="button" id="searchReset" class="btn btn-info"&gt;...&lt;/button&gt; is not clickable at point (1151, 173). Other element would receive the click: &lt;div class="modal-footer"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Terminal_list.py", line 129, in test_Reset
+    homepage.searchReset()  #  重置
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 579, in searchReset
+    self.click(self.search_R)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;button type="button" id="searchReset" class="btn btn-info"&gt;...&lt;/button&gt; is not clickable at point (1151, 173). Other element would receive the click: &lt;div class="modal-footer"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Oms_Business_combination.Upgrade_task.Upgrade</td>
+    <td>5</td>
+    <td>0</td>
+    <td>0</td>
+    <td>5</td>
+    <td><a href="javascript:showClassDetail('c4',5)">Detail</a></td>
+</tr>
+
+<tr id='ft4.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_Newly_added: 新增</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.1')" >
+        error</a>
+
+    <div id='div_ft4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.1: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Upgrade_task.py", line 35, in test_Newly_added
+    driver.find_element_by_id('upload_apk_file').send_keys('d:\\EPG-YH-FJLT-VER4.01.200-20161117-F.apk')  #  上传APK文件
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 352, in send_keys
+    'value': keys_to_typing(value)})
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: invalid argument: File not found : d:\EPG-YH-FJLT-VER4.01.200-20161117-F.apk
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Upgrade_task.py", line 35, in test_Newly_added
+    driver.find_element_by_id('upload_apk_file').send_keys('d:\\EPG-YH-FJLT-VER4.01.200-20161117-F.apk')  #  上传APK文件
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 352, in send_keys
+    'value': keys_to_typing(value)})
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: invalid argument: File not found : d:\EPG-YH-FJLT-VER4.01.200-20161117-F.apk
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_enable: 启用</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.2')" >
+        error</a>
+
+    <div id='div_ft4.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.2: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Upgrade_task.py", line 66, in test_enable
+    homepage.table_input()  #  点击复选
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 539, in table_input
+    self.click(self.tab_input)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;input data-index="0" name="btSelectItem" type="checkbox"&gt; is not clickable at point (368, 216). Other element would receive the click: &lt;div class="modal fade in" role="dialog" id="add_upgrade_type_dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="false" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Upgrade_task.py", line 66, in test_enable
+    homepage.table_input()  #  点击复选
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 539, in table_input
+    self.click(self.tab_input)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;input data-index="0" name="btSelectItem" type="checkbox"&gt; is not clickable at point (368, 216). Other element would receive the click: &lt;div class="modal fade in" role="dialog" id="add_upgrade_type_dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="false" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_disable: 停用</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.3')" >
+        error</a>
+
+    <div id='div_ft4.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.3: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Upgrade_task.py", line 90, in test_disable
+    homepage.table_input()  #  点击复选
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 539, in table_input
+    self.click(self.tab_input)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;input data-index="0" name="btSelectItem" type="checkbox"&gt; is not clickable at point (368, 216). Other element would receive the click: &lt;div class="modal fade in" role="dialog" id="add_upgrade_type_dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="false" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Upgrade_task.py", line 90, in test_disable
+    homepage.table_input()  #  点击复选
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 539, in table_input
+    self.click(self.tab_input)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;input data-index="0" name="btSelectItem" type="checkbox"&gt; is not clickable at point (368, 216). Other element would receive the click: &lt;div class="modal fade in" role="dialog" id="add_upgrade_type_dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="false" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_edit: 编辑</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.4')" >
+        error</a>
+
+    <div id='div_ft4.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.4: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Upgrade_task.py", line 113, in test_edit
+    homepage.business_edit()  #  点击编辑
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 1333, in business_edit
+    self.click(self.bus_edit)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;i class="glyphicon glyphicon-edit"&gt;&lt;/i&gt; is not clickable at point (510, 216). Other element would receive the click: &lt;label class="col-sm-3 control-label"&gt;...&lt;/label&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Upgrade_task.py", line 113, in test_edit
+    homepage.business_edit()  #  点击编辑
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 1333, in business_edit
+    self.click(self.bus_edit)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;i class="glyphicon glyphicon-edit"&gt;&lt;/i&gt; is not clickable at point (510, 216). Other element would receive the click: &lt;label class="col-sm-3 control-label"&gt;...&lt;/label&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_delete: 删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.5')" >
+        error</a>
+
+    <div id='div_ft4.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.5: Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Upgrade_task.py", line 136, in test_delete
+    homepage.table_input()  # 点击复选
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 539, in table_input
+    self.click(self.tab_input)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;input data-index="0" name="btSelectItem" type="checkbox"&gt; is not clickable at point (368, 216). Other element would receive the click: &lt;div class="modal fade in" role="dialog" id="add_upgrade_type_dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="false" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+Traceback (most recent call last):
+  File "E:\automation_framework\Oms_Business_combination\Upgrade_task.py", line 136, in test_delete
+    homepage.table_input()  # 点击复选
+  File "E:\automation_framework\pageobjects\cibn_homepage.py", line 539, in table_input
+    self.click(self.tab_input)
+  File "E:\automation_framework\framework\base_page.py", line 138, in click
+    el.click()
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\lcx\AppData\Roaming\Python\Python33\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;input data-index="0" name="btSelectItem" type="checkbox"&gt; is not clickable at point (368, 216). Other element would receive the click: &lt;div class="modal fade in" role="dialog" id="add_upgrade_type_dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="false" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Oms_Business_combination.Upgrade_details.Upgrade_detail</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',2)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_search: 搜索</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')" >
+        pass</a>
+
+    <div id='div_pt5.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.1: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Reset: 重置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.2')" >
+        pass</a>
+
+    <div id='div_pt5.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.2: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>30</td>
+    <td>12</td>
+    <td>0</td>
+    <td>18</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

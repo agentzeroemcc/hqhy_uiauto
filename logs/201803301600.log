@@ -1,0 +1,6 @@
+2018-03-30 16:00:47,401 - BrowserEngine - INFO - You had select Chrome browser.
+2018-03-30 16:00:47,401 - BrowserEngine - INFO - The test server url is: http://test-04.guttv.lab:9993/cas/login?service=http://test-06.guttv.lab:8814/vod_console/authentication
+2018-03-30 16:00:51,563 - BrowserEngine - INFO - Starting Chrome browser.
+2018-03-30 16:00:54,883 - BrowserEngine - INFO - Open url: http://test-04.guttv.lab:9993/cas/login?service=http://test-06.guttv.lab:8814/vod_console/authentication
+2018-03-30 16:00:56,041 - BrowserEngine - INFO - Maximize the current window.
+2018-03-30 16:00:56,044 - BrowserEngine - INFO - Set implicitly wait 10 seconds.

@@ -1,0 +1,42 @@
+2018-03-30 11:08:36,275 - BrowserEngine - INFO - You had select Chrome browser.
+2018-03-30 11:08:36,275 - BrowserEngine - INFO - The test server url is: http://test-04.guttv.lab:9993/cas/login?service=http://test-06.guttv.lab:8814/vod_console/authentication
+2018-03-30 11:08:40,481 - BrowserEngine - INFO - Starting Chrome browser.
+2018-03-30 11:08:43,828 - BrowserEngine - INFO - Open url: http://test-04.guttv.lab:9993/cas/login?service=http://test-06.guttv.lab:8814/vod_console/authentication
+2018-03-30 11:08:44,969 - BrowserEngine - INFO - Maximize the current window.
+2018-03-30 11:08:44,971 - BrowserEngine - INFO - Set implicitly wait 10 seconds.
+2018-03-30 11:08:45,020 - BasePage - INFO - Had find the element '  ' successful by id via value: username 
+2018-03-30 11:08:45,124 - BasePage - INFO - Had type ' admin ' in inputBox
+2018-03-30 11:08:46,125 - BasePage - INFO - Sleep for 1 seconds
+2018-03-30 11:08:46,215 - BasePage - INFO - Had find the element '  ' successful by id via value: password 
+2018-03-30 11:08:46,269 - BasePage - INFO - Had type ' 1234 ' in inputBox
+2018-03-30 11:08:47,270 - BasePage - INFO - Sleep for 1 seconds
+2018-03-30 11:08:47,308 - BasePage - INFO - Had find the element ' 登录 ' successful by xpath via value: //*[@id='fm1']/div[7]/div/button 
+2018-03-30 11:08:47,803 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="78cac9773dc17979b0a98be30cf697d5", element="0.19153674437174262-3")> ' was clicked.
+2018-03-30 11:08:49,805 - BasePage - INFO - Sleep for 2 seconds
+2018-03-30 11:08:49,881 - BasePage - INFO - Had find the element ' 业务分组 ' successful by xpath via value: /html/body/div[1]/div/div[2]/ul[1]/li[6]/a 
+2018-03-30 11:08:52,095 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="78cac9773dc17979b0a98be30cf697d5", element="0.13894971538254808-1")> ' was clicked.
+2018-03-30 11:08:54,096 - BasePage - INFO - Sleep for 2 seconds
+2018-03-30 11:08:54,170 - BasePage - INFO - Had find the element ' 新增 ' successful by xpath via value: //*[@id="custom-toolbar"]/div/button[1] 
+2018-03-30 11:08:54,244 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="78cac9773dc17979b0a98be30cf697d5", element="0.5314078407825291-1")> ' was clicked.
+2018-03-30 11:08:57,244 - BasePage - INFO - Sleep for 3 seconds
+2018-03-30 11:08:57,302 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="name"] 
+2018-03-30 11:08:57,431 - BasePage - INFO - Had type ' KS业务分组测试 ' in inputBox
+2018-03-30 11:08:59,433 - BasePage - INFO - Sleep for 2 seconds
+2018-03-30 11:09:00,676 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="description"] 
+2018-03-30 11:09:00,752 - BasePage - INFO - Had type ' 测试专用 ' in inputBox
+2018-03-30 11:09:02,753 - BasePage - INFO - Sleep for 2 seconds
+2018-03-30 11:09:02,827 - BasePage - INFO - Had find the element ' 新建 ' successful by xpath via value: //*[@id="btnCreate"] 
+2018-03-30 11:09:03,486 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="78cac9773dc17979b0a98be30cf697d5", element="0.5314078407825291-6")> ' was clicked.
+2018-03-30 11:09:06,486 - BasePage - INFO - Sleep for 3 seconds
+2018-03-30 11:09:06,574 - BasePage - INFO - Had find the element ' 业务分组 ' successful by xpath via value: /html/body/div[1]/div/div[2]/ul[1]/li[6]/a 
+2018-03-30 11:09:06,846 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="78cac9773dc17979b0a98be30cf697d5", element="0.4670175813887647-1")> ' was clicked.
+2018-03-30 11:09:08,846 - BasePage - INFO - Sleep for 2 seconds
+2018-03-30 11:09:08,906 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="searchText"] 
+2018-03-30 11:09:08,984 - BasePage - INFO - Had type ' 角标 ' in inputBox
+2018-03-30 11:09:10,985 - BasePage - INFO - Sleep for 2 seconds
+2018-03-30 11:09:11,071 - BasePage - INFO - Had find the element ' 搜索 ' successful by xpath via value: //*[@id="custom-toolbar"]/div/button[6] 
+2018-03-30 11:09:11,134 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="78cac9773dc17979b0a98be30cf697d5", element="0.39365127438230907-2")> ' was clicked.
+2018-03-30 11:09:13,135 - BasePage - INFO - Sleep for 2 seconds
+2018-03-30 11:09:13,196 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="table"]/tbody/tr/td[2]/a[1]/i 
+2018-03-30 11:09:13,293 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="78cac9773dc17979b0a98be30cf697d5", element="0.39365127438230907-3")> ' was clicked.
+2018-03-30 11:09:15,294 - BasePage - INFO - Sleep for 2 seconds

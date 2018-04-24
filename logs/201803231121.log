@@ -1,0 +1,77 @@
+2018-03-23 11:21:02,367 - BrowserEngine - INFO - You had select Chrome browser.
+2018-03-23 11:21:02,367 - BrowserEngine - INFO - The test server url is: http://test-04.guttv.lab:9993/cas/login?service=http://test-06.guttv.lab:8814/vod_console/authentication
+2018-03-23 11:21:06,619 - BrowserEngine - INFO - Starting Chrome browser.
+2018-03-23 11:21:10,783 - BrowserEngine - INFO - Open url: http://test-04.guttv.lab:9993/cas/login?service=http://test-06.guttv.lab:8814/vod_console/authentication
+2018-03-23 11:21:11,911 - BrowserEngine - INFO - Maximize the current window.
+2018-03-23 11:21:11,917 - BrowserEngine - INFO - Set implicitly wait 10 seconds.
+2018-03-23 11:21:11,971 - BasePage - INFO - Had find the element '  ' successful by id via value: username 
+2018-03-23 11:21:12,061 - BasePage - INFO - Had type ' admin ' in inputBox
+2018-03-23 11:21:13,061 - BasePage - INFO - Sleep for 1 seconds
+2018-03-23 11:21:13,102 - BasePage - INFO - Had find the element '  ' successful by id via value: password 
+2018-03-23 11:21:13,166 - BasePage - INFO - Had type ' 1234 ' in inputBox
+2018-03-23 11:21:14,167 - BasePage - INFO - Sleep for 1 seconds
+2018-03-23 11:21:14,211 - BasePage - INFO - Had find the element ' 登录 ' successful by xpath via value: //*[@id='fm1']/div[7]/div/button 
+2018-03-23 11:21:14,738 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.11613257227974683-3")> ' was clicked.
+2018-03-23 11:21:16,740 - BasePage - INFO - Sleep for 2 seconds
+2018-03-23 11:21:21,064 - BasePage - INFO - Had find the element ' 渠道管理 ' successful by xpath via value: /html/body/div[1]/div/div[2]/ul[1]/li[2]/a 
+2018-03-23 11:21:21,584 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.25352060026622314-1")> ' was clicked.
+2018-03-23 11:21:23,584 - BasePage - INFO - Sleep for 2 seconds
+2018-03-23 11:21:24,654 - BasePage - INFO - Had find the element ' 渠道定价 ' successful by xpath via value: //*[@id="collapseOne"]/div/ul/li[2]/a 
+2018-03-23 11:21:25,056 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.5713928207014174-1")> ' was clicked.
+2018-03-23 11:21:28,058 - BasePage - INFO - Sleep for 3 seconds
+2018-03-23 11:21:33,326 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="packageTree"]/ul/li[3]/span[2] 
+2018-03-23 11:21:33,425 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-5")> ' was clicked.
+2018-03-23 11:21:35,427 - BasePage - INFO - Sleep for 2 seconds
+2018-03-23 11:21:35,470 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="packageTree"]/ul/li[4]/span[3] 
+2018-03-23 11:21:35,543 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-6")> ' was clicked.
+2018-03-23 11:21:37,545 - BasePage - INFO - Sleep for 2 seconds
+2018-03-23 11:21:37,597 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="packageTree"]/ul/li[5]/span[6] 
+2018-03-23 11:21:37,675 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-7")> ' was clicked.
+2018-03-23 11:21:38,675 - BasePage - INFO - Sleep for 1 seconds
+2018-03-23 11:21:38,722 - BasePage - INFO - Had find the element ' 产品包批量定价 ' successful by xpath via value: //*[@id="bindPackage"] 
+2018-03-23 11:21:38,802 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-8")> ' was clicked.
+2018-03-23 11:21:39,802 - BasePage - INFO - Sleep for 1 seconds
+2018-03-23 11:21:39,999 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="customId_13"]/td[1]/input 
+2018-03-23 11:21:40,093 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-11")> ' was clicked.
+2018-03-23 11:21:41,094 - BasePage - INFO - Sleep for 1 seconds
+2018-03-23 11:21:41,135 - BasePage - INFO - Had find the element ' 确认 ' successful by xpath via value: //*[@id="bindPackageSubmit"] 
+2018-03-23 11:21:41,219 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-12")> ' was clicked.
+2018-03-23 11:21:43,219 - BasePage - INFO - Sleep for 2 seconds
+2018-03-23 11:21:43,265 - BasePage - INFO - Had find the element ' 确认 ' successful by xpath via value: /html/body/div[5]/div/div/div[3]/button 
+2018-03-23 11:21:43,333 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-13")> ' was clicked.
+2018-03-23 11:21:46,335 - BasePage - INFO - Sleep for 3 seconds
+2018-03-23 11:21:51,340 - BrowserEngine - INFO - You had select Chrome browser.
+2018-03-23 11:21:51,341 - BrowserEngine - INFO - The test server url is: http://10.3.1.107:8801/bms_api/price!getPackagePricing?serviceComboCode=1100121022149038548320021&serviceGroupCode=1100122106018227744980001&packageCode=2100130106015832271170002&authType=0&authCode=1301301087006196857558000101&token=0
+2018-03-23 11:21:51,392 - BrowserEngine - INFO - agentzero渠道定价
+2018-03-23 11:21:53,440 - BasePage - INFO - Had find the element ' 产品定价 ' successful by xpath via value: //*[@id="bindProduct"] 
+2018-03-23 11:21:53,516 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-14")> ' was clicked.
+2018-03-23 11:21:56,516 - BasePage - INFO - Sleep for 3 seconds
+2018-03-23 11:21:57,587 - BasePage - INFO - Had find the element ' 选择产品 ' successful by xpath via value: //*[@id="chooseProduct"] 
+2018-03-23 11:21:57,670 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-15")> ' was clicked.
+2018-03-23 11:21:59,670 - BasePage - INFO - Sleep for 2 seconds
+2018-03-23 11:22:00,710 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="productName"] 
+2018-03-23 11:22:00,835 - BasePage - INFO - Had type ' 超体AZ ' in inputBox
+2018-03-23 11:22:02,836 - BasePage - INFO - Sleep for 2 seconds
+2018-03-23 11:22:03,887 - BasePage - INFO - Had find the element ' 搜索 ' successful by xpath via value: //*[@id="searchProduct"] 
+2018-03-23 11:22:03,957 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-17")> ' was clicked.
+2018-03-23 11:22:04,957 - BasePage - INFO - Sleep for 1 seconds
+2018-03-23 11:22:06,006 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="unSelectedProductTable"]/tbody/tr/td[1]/input 
+2018-03-23 11:22:06,072 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-18")> ' was clicked.
+2018-03-23 11:22:07,073 - BasePage - INFO - Sleep for 1 seconds
+2018-03-23 11:22:08,138 - BasePage - INFO - Had find the element ' ---> ' successful by xpath via value: //*[@id="productAdd"] 
+2018-03-23 11:22:08,219 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-19")> ' was clicked.
+2018-03-23 11:22:11,220 - BasePage - INFO - Sleep for 3 seconds
+2018-03-23 11:22:12,267 - BasePage - INFO - Had find the element ' 确认 ' successful by xpath via value: //*[@id="productInfo"] 
+2018-03-23 11:22:12,372 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-20")> ' was clicked.
+2018-03-23 11:22:13,373 - BasePage - INFO - Sleep for 1 seconds
+2018-03-23 11:22:14,413 - BasePage - INFO - Had find the element '  ' successful by xpath via value: //*[@id="radio_1200190106010797371810004"] 
+2018-03-23 11:22:14,476 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-21")> ' was clicked.
+2018-03-23 11:22:15,477 - BasePage - INFO - Sleep for 1 seconds
+2018-03-23 11:22:16,549 - BasePage - INFO - Had find the element ' 确认 ' successful by xpath via value: //*[@id="bindProductSubmit"] 
+2018-03-23 11:22:16,624 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-22")> ' was clicked.
+2018-03-23 11:22:17,624 - BasePage - INFO - Sleep for 1 seconds
+2018-03-23 11:22:18,676 - BasePage - INFO - Had find the element ' 确认 ' successful by xpath via value: /html/body/div[5]/div/div/div[3]/button 
+2018-03-23 11:22:18,739 - BasePage - INFO - The element ' <selenium.webdriver.remote.webelement.WebElement (session="e963a47f3bd5b92676e1bf9f4ba4f041", element="0.1584272532403188-23")> ' was clicked.
+2018-03-23 11:22:21,740 - BasePage - INFO - Sleep for 3 seconds
+2018-03-23 11:22:22,743 - BrowserEngine - INFO - You had select Chrome browser.
+2018-03-23 11:22:22,744 - BrowserEngine - INFO - The test server url is: http://10.3.1.107:8801/bms_api/price!getProductPricing?serviceComboCode=1100121022149038548320021&serviceGroupCode=1100122022055962258270018&productCode=2100140022637251514190168&authType=0&authCode=1300110023639283196740468&token=1&hasAuth=0
